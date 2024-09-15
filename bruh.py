@@ -6,7 +6,7 @@ from numba import jit, prange
 import datetime as dt
 import time
 start_time = time.time()
-
+another_time = time.time()
 file_path = 'port.xlsx'
 
 # Load portfolio data
