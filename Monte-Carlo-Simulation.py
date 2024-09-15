@@ -25,7 +25,7 @@ data = yf.download(tickers, start='2014-01-01', end=dt.datetime.now())['Adj Clos
 returns = data.pct_change().dropna()
 
 # Simulation parameters
-num_simulations = 100000
+num_simulations = 1000
 num_days = 252  
 
 # Mean returns and covariance matrix
@@ -80,7 +80,6 @@ plt.plot(simulation_results)
 plt.title('Monte Carlo Simulation of Portfolio Returns')
 plt.xlabel('Days')
 plt.ylabel('Portfolio Value')
-#plt.show()
 
 # Display the summary statistics on the plot
 textstr = (f"Mean ending value: ${mean_ending_value:,.2f}\n"
@@ -94,6 +93,7 @@ plt.gcf().text(0.2, 0.75, textstr, fontsize=10, verticalalignment='center', bbox
 
 # Save the plot to a file
 plt.savefig('portfolio_simulation_with_stats.png')
+plt.show()
 
 # Print the results
 print(f"Mean ending portfolio value: ${mean_ending_value:,.2f}")
