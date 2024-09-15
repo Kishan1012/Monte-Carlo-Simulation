@@ -80,7 +80,7 @@ plt.plot(simulation_results)
 plt.title('Monte Carlo Simulation of Portfolio Returns')
 plt.xlabel('Days')
 plt.ylabel('Portfolio Value')
-plt.show()
+#plt.show()
 
 # Display the summary statistics on the plot
 textstr = (f"Mean ending value: ${mean_ending_value:,.2f}\n"
